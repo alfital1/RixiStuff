@@ -1,11 +1,11 @@
 <html>
     <head>
-        <link rel="stylesheet" href="sparkles.css">
+        <link rel="stylesheet" href="https://alfital1.github.io/RixiStuff/sparkles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="sparkles.js"></script>
+        <script src="https://alfital1.github.io/RixiStuff/sparkles.js"></script>
     </head>
     <body>
-
+chkchkchkchk
         <h1>A little canvas script to <span>add magic</span> to DOM elements!</h1>
 
         <button class="sparkley">Everything's better with sparkles!</button>
