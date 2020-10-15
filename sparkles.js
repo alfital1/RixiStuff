@@ -3,7 +3,7 @@
 
 $(function() {
     
-      var cssId = 'sparkles';  // you could encode the css path itself to generate id..
+      var cssId = 'sparkles';
       if (!document.getElementById(cssId))
       {
           var head  = document.getElementsByTagName('head')[0];
@@ -16,19 +16,14 @@ $(function() {
           head.appendChild(link);
       }
       
-      // default is varying levels of transparent white sparkles
       $(".sparkles").sparkleh();
       
-      // rainbow as a color generates random rainbow colros
-      // count determines number of sparkles
-      // overlap allows sparkles to migrate... watch out for other dom elements though.
       /*$(".sparkley:last").sparkleh({
         color: "rainbow",
         count: 100,
         overlap: 10
       });
       
-      // here we create fuscia sparkles
       $("h1").sparkleh({
         count: 80,
         color: ["#ff0080","#ff0080","#0000FF"]
@@ -42,11 +37,6 @@ $(function() {
         speed: 0.05
       });
       
-      
-      // an array can be passed, too for colours
-      // for an image, the image needs to be fully loaded to set
-      // the canvas to it's height/width.
-      // speed allows us to control... the ... velocity 
       $("#image").imagesLoaded( function() {
         $(".img").sparkleh({
           count: 25,
