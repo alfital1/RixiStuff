@@ -3,8 +3,8 @@
 
 $(function() {
 
-      $(".sparkles").sparkleh();
-      $(".sparkles-always").sparklehAlways();
+      $(".sparkles").sparkleh({always:false});
+      $(".sparkles-always").sparkleh({always:true});
       
       /*$(".sparkley:last").sparkleh({
         color: "rainbow",
@@ -52,52 +52,23 @@ $(function() {
         }, options );
         
         var sparkle = new Sparkle( $this, settings );
-
-        $this.on({
-          "mouseover focus" : function(e) {
-            sparkle.over();
-          },
-          "mouseout blur" : function(e) {
-            sparkle.out();
-          }
-        });
+        if (options.always) {
+          sparkle.over();
+        }
+        else {
+          $this.on({
+            "mouseover focus" : function(e) {
+              sparkle.over();
+            },
+            "mouseout blur" : function(e) {
+              sparkle.out();
+            }
+          });
+        }
         
       });
       
     }
-    
-    $.fn.sparklehAlways = function( options ) {
-      
-    return this.each( function(k,v) {
-      
-      var $this = $(v).css("position","relative");
-      
-      var settings = $.extend({
-        width: $this.outerWidth(),
-        height: $this.outerHeight(),
-        color: "#FFFFFF",
-        count: 30,
-        overlap: 0,
-        speed: 1
-      }, options );
-      
-      var sparkle = new Sparkle( $this, settings );
-      sparkle.over();
-      
-      /*$this.on({
-        "mouseover focus" : function(e) {
-          sparkle.over();
-        },
-        "mouseout blur" : function(e) {
-          sparkle.out();
-        }
-      });*/
-      
-    });
-    
-  }
-    
-    
     
     function Sparkle( $parent, options ) {
       this.options = options;
