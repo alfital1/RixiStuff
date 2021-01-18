@@ -3,8 +3,8 @@
 
 $(function() {
 
-      $(".sparkles").sparkleh({always:false});
-      $(".sparkles-always").sparkleh({always:true});
+      /*$(".sparkles").sparkleh({always:false});
+      $(".sparkles-always").sparkleh({always:true});*/
       
       /*$(".sparkley:last").sparkleh({
         color: "rainbow",
