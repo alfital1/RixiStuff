@@ -100,6 +100,7 @@
 
             const randomData = [
                 'gg wp rawr',
+                'הרגת אותנו אמיר',
                 'if you kill him - he will die!',
                 'ברוסיה הסובייטית אמיר לא מסתכל על המינימאפ. המינימאפ מסתכל על אמיר',
                 'אין ספק שגיא אדם עם לב גדול. אבל איפה אתם נווווו צק צק צק',
@@ -115,7 +116,7 @@
             ];
             
             function generateRandomData() {
-                var rand = Math.floor(Math.random() * 12);
+                var rand = Math.floor(Math.random() * randomData.Length);
                 document.getElementById("datadiv").innerHTML = randomData[rand];
             }
 
